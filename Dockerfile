@@ -9,7 +9,7 @@ RUN set -xe &&\
 
 RUN curl --silent --show-error --fail --location \
     --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-    "https://github.com/coredns/coredns/releases/download/v${COREDNS_VERSION}/release.coredns_${COREDNS_VERSION}_linux_amd64.tgz" \
+    "https://github.com/coredns/coredns/releases/download/v${COREDNS_VERSION}/coredns_${COREDNS_VERSION}_linux_amd64.tgz" \
     | tar --no-same-owner -C /usr/bin/ -xz coredns &&\
     apk del curl &&\
     rm -rf /var/cache/apk/* &&\
